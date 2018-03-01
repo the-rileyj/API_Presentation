@@ -17,7 +17,7 @@ var v = new Vue({
                 v.picture = res.data.hdurl
             })
             .catch((err) => {
-                this.err = err;
+                this.err = err.response.data.msg;
             });
         }
     },
@@ -28,7 +28,7 @@ var v = new Vue({
             v.key = res.data.key
         })
         .catch((err) => {
-            
+            //Though not nessesary with how the webserver is structured, this is hypothetically where error handling would go
         });
     }
 });
