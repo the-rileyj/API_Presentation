@@ -33,6 +33,7 @@ func main() {
 
 	r := gin.Default()
 	r.GET("/", func(c *gin.Context) { http.ServeFile(c.Writer, c.Request, "./index.html") })
+	r.GET("/test", func(c *gin.Context) { http.ServeFile(c.Writer, c.Request, "./test.html") })
 	r.GET("/static/css/:fi", static.Serve("/static/css", static.LocalFile("static/css/", true)))
 	r.GET("/static/img/:fi", static.Serve("/static/img", static.LocalFile("static/img/", true)))
 	r.GET("/static/js/:fi", static.Serve("/static/js", static.LocalFile("static/js/", true)))

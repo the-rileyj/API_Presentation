@@ -1,1 +1,4 @@
-{"nasa": "api_key_here"}
+{
+    "nasa": "api_key_here",
+    "someNumber": 6
+}

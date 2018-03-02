@@ -8,7 +8,7 @@ if os.path.exists("creds.json"):
 
 while True:
     key = input("Enter key for value: ")
-    value = input("Enter key for value: ")
+    value = input("Enter value for key: ")
     if all(x.lower() not in ["cancel", "retry", "quit"] for x in [key, value]):
         creds[key] = value
         with open("creds.json", "w") as fi:
